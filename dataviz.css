@@ -4,3 +4,17 @@ background-color: #ffffff;}
 p {
 padding: 5px;
 margin: 0px;}
+
+a:link  {
+color:darkcyan;
+text-decoration: underline;}
+
+a:visited  {
+color:blue
+text-decoration: blue;}
+
+a:hover {
+color:orange;}
+
+a:active  {
+color:black;}
