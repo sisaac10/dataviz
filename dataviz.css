@@ -20,3 +20,9 @@ color:orange;}
 
 a:active  {
 color:black;}
+
+td  {
+text-align: center;}
+
+tr.even  {
+background-color: #efefef;}
