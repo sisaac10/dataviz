@@ -5,14 +5,13 @@
 function adder() {
 
 var i = 0;
-var total2 = 0;
+var result = 0;
 while (total < 100) {
 var num1 = parseInt(document.getElementById("txt1").value);
 var num2 = parseInt(document.getElementById("txt2").value);
 var total = num1 + num2
-total2 += total;
+result += total;
 }
-document.write("process ended" + total2)
 	}
 </script>
   <button onclick="adder()">Submit</button>
@@ -20,5 +19,7 @@ document.write("process ended" + total2)
 First number: <input type="text" id="txt1" name="num1"><br /><br />
 Second number: <input type="text" id="txt2" name="num2"><br /><br />
 </form>
+result = document.getElementById("result").innerHTML
+document.write("process ended" + total2)
 </html>
 </body>
