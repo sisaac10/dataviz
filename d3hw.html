@@ -8,6 +8,16 @@
 </head>
 <body>
   <div id="bar1">
+    <script type="text/javascript">
+var svg1 = d3.select("#bar1")
+             .append("svg")
+             .attr("width", 500)
+             .attr("height", 30);
+
+var bar1 = svg1.append("rect")
+               .attr("width", 250)
+               .attr("height", 30);
+</script>
   </div>
   <div id="bar2">
   </div>
