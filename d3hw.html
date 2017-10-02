@@ -7,8 +7,8 @@
 </script>
 </head>
 <body>
-  <div id="bar1">
-    <script type="text/javascript">
+ <div id="bar1">
+<script type="text/javascript">
 var svg1 = d3.select("#bar1")
              .append("svg")
              .attr("width", 500)
@@ -17,11 +17,18 @@ var svg1 = d3.select("#bar1")
 var bar1 = svg1.append("rect")
                .attr("width", 250)
                .attr("height", 30);
+
+svg1.append("text")
+    .attr("x", 200)
+    .attr("y", 17.5)
+    .text("250")
+    .style("fill", "white");
 </script>
-  </div>
-  <div id="bar2">
-  </div>
- <div id="bar3">
+</div>
+<div id="bar2">
+</div>
+  
+<div id="bar3">
   </div>
  <div id="bar4">
   </div>
