@@ -14,7 +14,11 @@ var theOneRingOwners = {
 1:"Isildur"
 };
 var svg = d3.select("body").append("svg");
-	
+var svg = d3.select("body").append("svg")
+    .attr("width", 700);
+
+    console.log(svg.attr)
+
     console.log(typeof(svg));
 console.log(theOneRing.color);
 console.log(theOneRingOwners[1]);
