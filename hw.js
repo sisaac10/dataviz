@@ -18,3 +18,8 @@ var today = new Date();
 
 
 
+var theOneRing = {
+color:"yellow",
+material:"gold",
+maker:"Sauron",
+};
