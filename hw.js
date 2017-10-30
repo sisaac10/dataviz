@@ -2,8 +2,13 @@
 
 
 var today = new Date();
-  var hourNow = today.getHours();
-  var greeting;
+var hourNow = today.getHours();
+var greeting;
+var theOneRing = {
+color:"yellow",
+material:"gold",
+maker:"Sauron",
+};
   
   if (hourNow > 18) {
     greeting = 'Good Evening!';
@@ -18,8 +23,4 @@ var today = new Date();
 
 
 
-var theOneRing = {
-color:"yellow",
-material:"gold",
-maker:"Sauron",
-};
+
