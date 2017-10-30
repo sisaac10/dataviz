@@ -1,3 +1,12 @@
+
+var theOneRing = new Object{};
+theOneRing.color = "yellow";
+theOneRing.material = "gold";
+theOneRing.maker = "Sauron";
+
+console.log(theOneRing.color);
+
+
 var today = new Date();
   var hourNow = today.getHours();
   var greeting;
