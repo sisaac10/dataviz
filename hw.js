@@ -17,12 +17,12 @@ var theOneRingOwners = {
 var svg = d3.select("body").append("svg")
     .attr("width", 700);
 
+
+var dataset = []
 d3.csv("co2_income.csv", function(data) {
-    svg.selectAll()
-    var xAxis = d3.svg.axis()
-    .scale(xScale)
-    .orient("bottom");
-    });
+   dataset = data.map(function(d) { return [ +d["max_i"], +d["min_i"] ]; });
+   console.log(dataset)
+});
 
 
     console.log(svg.attr)
