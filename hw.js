@@ -21,6 +21,6 @@ maker:"Sauron",
   }
   document.write(greeting);
 
-
+console.log(theOneRing.color);
 
 
