@@ -12,3 +12,12 @@ var today = new Date();
     greeting = 'Good Afternoon!';
   }
   document.write('<h3>' + greeting + '<h3>');
+
+
+var xAxis = d3.svg.axis()
+    .scale(xScale)
+    .orient("bottom");
+
+svg.append("g")
+   .attr("class", "x axis")
+   .call(xAxis);
