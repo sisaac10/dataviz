@@ -1,5 +1,5 @@
 
-<script src="https://d3js.org/d3.v4.min.js"></script>
+
 var today = new Date();
 var hourNow = today.getHours();
 var greeting;
