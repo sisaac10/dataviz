@@ -4,13 +4,21 @@
 var today = new Date();
 var hourNow = today.getHours();
 var greeting;
+
 var theOneRing = {
 color:"yellow",
 material:"gold",
 maker:"Sauron",
 };
+var theOneRingOwners = {
+0:"Sauron",
+1:"Isildur"
+};
+
 console.log(theOneRing.color);
-  
+console.log(theOneRingOwners[1]);
+
+
   if (hourNow > 18) {
     greeting = 'Good Evening!';
   } else if (hourNow > 12) {
