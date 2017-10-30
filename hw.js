@@ -19,7 +19,7 @@ maker:"Sauron",
   } else {
     greeting = 'Good Afternoon!';
   }
-  document.write('<h3>' + greeting + '<h3>');
+  document.write(greeting);
 
 
 
