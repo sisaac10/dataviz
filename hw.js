@@ -18,13 +18,12 @@ var svg = d3.select("body").append("svg")
     .attr("width", 700);
 
 d3.csv("co2_income.csv", function(data) {
-	svg.selectAll("circle")
-.data(values)
-.enter()
-.append("circle")
-.attr("cy", height/2)
-.attr("r", 5)
-.attr("cx", function(d) {return width * d;});
+var circles = svg.selectAll("circle")
+		 	 .data(data)
+   	         .enter().append("circle")
+		 	 .attr('cy', h/2)
+		 	 .attr('r', 5)
+      	     .attr('cx', function(d) {return w*d;});
     });
 
     console.log(svg.attr)
