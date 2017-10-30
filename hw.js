@@ -24,6 +24,9 @@ d3.csv("co2_income.csv", function(data) {
     var xAxis = d3.svg.axis()
     .scale(xScale)
     .orient("bottom");
+    svg.append("g")
+   .attr("class", "x axis")
+   .call(xAxis);
 });
 
 
