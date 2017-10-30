@@ -19,10 +19,10 @@ var svg = d3.select("body").append("svg")
 
 
 
-var dataset = d3.csv("co2_income.csv", function(data) {
+d3.csv("co2_income.csv", function(data) {
 });
 
-console.log(dataset)
+
     console.log(svg.attr)
 
     console.log(typeof(svg));
