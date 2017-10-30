@@ -1,5 +1,5 @@
 
-<script src="https://d3js.org/d3.v4.min.js">
+
 
 var today = new Date();
 var hourNow = today.getHours();
@@ -32,4 +32,4 @@ console.log(theOneRingOwners[1]);
 
 
 
-</script>
+
