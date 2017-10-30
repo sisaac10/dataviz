@@ -20,6 +20,10 @@ var svg = d3.select("body").append("svg")
 
 
 d3.csv("co2_income.csv", function(data) {
+    svg.selectAll()
+    var xAxis = d3.svg.axis()
+    .scale(xScale)
+    .orient("bottom");
 });
 
 
