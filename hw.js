@@ -13,7 +13,9 @@ var theOneRingOwners = {
 0:"Sauron",
 1:"Isildur"
 };
-
+var svg = d3.select("body").append("svg");
+	
+    console.log(typeof(svg));
 console.log(theOneRing.color);
 console.log(theOneRingOwners[1]);
 
