@@ -9,6 +9,7 @@ color:"yellow",
 material:"gold",
 maker:"Sauron",
 };
+console.log(theOneRing.color);
   
   if (hourNow > 18) {
     greeting = 'Good Evening!';
@@ -21,6 +22,6 @@ maker:"Sauron",
   }
   document.write(greeting);
 
-console.log(theOneRing.color);
+
 
 
