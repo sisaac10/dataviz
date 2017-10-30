@@ -18,13 +18,11 @@ var svg = d3.select("body").append("svg")
     .attr("width", 700);
 
 
-var dataset = []
-d3.csv("co2_income.csv", function(data) {
-   dataset = data.map(function(d) { return [ +d["max_i"], +d["min_i"] ]; });
-   console.log(dataset)
+
+var dataset = d3.csv("co2_income.csv", function(data) {
 });
 
-
+console.log(dataset)
     console.log(svg.attr)
 
     console.log(typeof(svg));
