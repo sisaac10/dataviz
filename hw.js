@@ -22,13 +22,14 @@ var theOneRingOwners = {
 d3.csv("co2_income.csv", function(data) {
    var svg = d3.select("body").append("svg")
     .attr("width", 700);
+    console.log(svg.attr)
+
+    console.log(typeof(svg));
     
 });
 
    
-    console.log(svg.attr)
-
-    console.log(typeof(svg));
+   
 console.log(theOneRing.color);
 console.log(theOneRingOwners[1]);
 
