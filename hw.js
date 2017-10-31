@@ -26,10 +26,12 @@ d3.csv("co2_income.csv", function(data) {
 
     console.log(typeof(svg));
    
-   svg.selectAll()
-   var xAxis = d3.svg.axis()
-    .scale(xScale)
-    .orient("bottom");
+   var circles = svg.selectAll("circle")
+		 	 .data(data)
+   	         .enter().append("circle")
+		 	 .attr('cy', h/2)
+		 	 .attr('r', 5)
+      	     .attr('cx', function(d) {return w*d;});
    
     
     
