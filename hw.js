@@ -18,12 +18,12 @@ var svg = d3.select("body").append("svg")
     .attr("width", 700);
 
 
-var csv_data;
+
 d3.csv("co2_income.csv", function(data) {
-    csv_data = data;
+   
 });
 
-    console.log(csv_data)
+   
     console.log(svg.attr)
 
     console.log(typeof(svg));
