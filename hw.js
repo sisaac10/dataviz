@@ -28,10 +28,6 @@ d3.csv("co2_income.csv", function(data) {
     .scale(xScale)
     .orient("bottom");
     
-    svg.append("g")
-   .attr("class", "x axis")
-   .attr("transform", "translate(0," + (h - padding) +")")
-   .call(xAxis);
 });
 
    
