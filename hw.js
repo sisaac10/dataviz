@@ -13,7 +13,10 @@ var theOneRingOwners = {
 
 
 
-
+d3.select("p")
+     .on("click", function() {
+     alert("Click working!");
+     });
 
 d3.csv("co2_income.csv", function(data) {
    var svg = d3.select("body").append("svg")
