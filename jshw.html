@@ -17,13 +17,18 @@ var theOneRingOwners = {
 1:"Isildur"
 };
 
-
-
-
+	
 d3.select("p")
-     .on("click", function() {
-     alert("Click working!");
-     });
+    .on("click", function() {
+    var xScale = d3.scale.log()
+		         .domain([1, xmax])
+        	     .range([padding, w - padding])
+                .nice();
+
+	svg.selectAll("circle")
+    	 .transition()
+        .attr('cx', function(d) {return xScale(+d.income);})
+   });
 
 d3.csv("co2_income.csv", function(data) {
    var svg = d3.select("body").append("svg")
