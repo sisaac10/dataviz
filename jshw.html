@@ -38,18 +38,14 @@ d3.csv("co2_income.csv", function(data) {
 
    console.log(typeof(svg));
    
-   var xAxis = d3.axisBottom()
-   .scale(xScale)
-   .orient("bottom");
+   var xAxis = d3.axisBottom(xScale);
    
    svg.append("g")
    .attr("class", "x axis")
    .attr("transform", "translate(0," + (h - padding) +")")
    .call(xAxis);
 	
-   var yAxis = d3.axisLeft()
-   .scale(yScale)
-   .orient("left");
+   var yAxis = d3.axisLeft(yScale);
 
    svg.append("g")
    .attr("class", "y axis")
