@@ -41,6 +41,7 @@ d3.csv("co2_income.csv", function(data) {
    w = 500;
    h = 500;
    padding = 30;
+   var xmax = d3.max(data, function(d) {return +d.income; });
    var xScale = d3.scaleLinear()
 
    .domain([0, xmax])
@@ -54,7 +55,7 @@ d3.csv("co2_income.csv", function(data) {
    .attr("class", "x axis")
    .attr("transform", "translate(0," + (h - padding) +")")
    .call(xAxis);
-   
+   var ymax = d3.max(data, function(d) {return +d.co2_emission; });
    var yScale = d3.scaleLinear()
 
    .domain([0, ymax])
