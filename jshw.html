@@ -39,7 +39,7 @@ d3.csv("co2_income.csv", function(data) {
 
    console.log(typeof(svg));
    
-   var xAxis = d3.axisBottom(xScale);
+   var xAxis = d3.axisBottom(xScale)
    .ticks(10);
    h = 500;
    padding = 30;	
@@ -49,7 +49,7 @@ d3.csv("co2_income.csv", function(data) {
    .call(xAxis);
    
 	
-   var yAxis = d3.axisLeft(yScale);
+   var yAxis = d3.axisLeft(yScale)
    .ticks(10);
    svg.append("g")
    .attr("class", "y axis")
