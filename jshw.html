@@ -6,9 +6,6 @@
 Click on this text to change to log-scale now.                                                                                                                                                
 </p>
 <script>
-
-
-
 	
 d3.select("p")
     .on("click", function() {
@@ -64,7 +61,12 @@ var line = d3.line()
     .y(function(d) { return yScale(d.silver_minted); })
     .interpolate("linear");
 	
-    
+var path = svg.append("path")
+    .attr("class", "line")
+    .attr("d", line(data))
+    .attr("stroke", "steelblue")
+    .attr("fill", "none");
+
 });
 
    
