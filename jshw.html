@@ -59,7 +59,7 @@ d3.csv("spanish-silver.csv", function(data) {
    .attr("transform", "translate(" + (padding) +")")
    .call(yAxis);
 	
-var line = d3.svg.line()
+var line = d3.line()
     .x(function(d) { return xScale(d.year); })
     .y(function(d) { return yScale(d.silver_minted); })
     .interpolate("linear");
