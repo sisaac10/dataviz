@@ -7,15 +7,7 @@ Click on this text to change to log-scale now.
 </p>
 <script>
 
-var theOneRing = {
-color:"yellow",
-material:"gold",
-maker:"Sauron",
-};
-var theOneRingOwners = {
-0:"Sauron",
-1:"Isildur"
-};
+
 
 	
 d3.select("p")
@@ -27,7 +19,7 @@ d3.select("p")
 
 	svg.selectAll("circle")
     	 .transition()
-        .attr('cx', function(d) {return xScale(+d.income);})
+        .attr('cx', function(d) {return xScale(+d.year);})
    });
 
 d3.csv("co2_income.csv", function(data) {
@@ -36,13 +28,10 @@ d3.csv("co2_income.csv", function(data) {
    .attr("height", 700);
    
    
-   console.log(svg.attr)
-
-   console.log(typeof(svg));
    w = 700;
    h = 700;
    padding = 30;
-   var xmax = d3.max(data, function(d) {return +d.income; });
+   var xmax = d3.max(data, function(d) {return +d.year; });
    var xScale = d3.scaleLinear()
 
    .domain([0, xmax])
@@ -56,7 +45,7 @@ d3.csv("co2_income.csv", function(data) {
    .attr("class", "x axis")
    .attr("transform", "translate(0," + (w - padding) +")")
    .call(xAxis);
-   var ymax = d3.max(data, function(d) {return +d.co2_emission; });
+   var ymax = d3.max(data, function(d) {return +d.silver_minted; });
    var yScale = d3.scaleLinear()
 
    .domain([0, ymax])
@@ -70,13 +59,16 @@ d3.csv("co2_income.csv", function(data) {
    .attr("transform", "translate(" + (padding) +")")
    .call(yAxis);
 	
+var line = d3.svg.line()
+    .x(function(d) { return xScale(d.year); })
+    .y(function(d) { return yScale(d.silver_minted); })
+    .interpolate("linear");
+	
     
 });
 
    
    
-console.log(theOneRing.color);
-console.log(theOneRingOwners[1]);
   
 </script>
 
