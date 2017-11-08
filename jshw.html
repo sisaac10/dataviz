@@ -67,13 +67,27 @@ var path = svg.append("path")
     .attr("stroke", "steelblue")
     .attr("fill", "none");
 
+var totalLength = path.node().getTotalLength();
+	
+	
+d3.select("#start").on("click", function() {
+	path
+	.attr("stroke-dasharray", totalLength + " " + totalLength)
+	.attr("stroke-dashoffset", totalLength)
+	.transition() 
+	.duration(5000) 
+	.ease("linear") 
+	.attr("stroke-dashoffset", 0); 
+
+});	
+
 });
 
    
    
   
 </script>
-
+<button id="start">Start Animation</button>
  
 </html>
 </body>
