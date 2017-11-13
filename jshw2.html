@@ -3,17 +3,16 @@
 <head>
 <meta charset="utf-8">
 <style>
-
-.states {
-				fill: none;
+.counties {
+				fill: #000;
 				stroke: #fff;
-				stroke-linejoin: round;
-}
+				stroke-width: 0.5px;
+ }
 </style>
 </head>
 <body>
-<script src="https://d3js.org/d3.v3.min.js"></script>
-<script src="https://d3js.org/topojson.v1.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
 <script>
 
 var width = 960, height = 500;
@@ -24,11 +23,11 @@ var svg = d3.select("body").append("svg")
 
 d3.json("us.json", function(error, us) {	
 	    svg.append("g")
-	    svg.append("path")
-   	    .datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
-            .attr("class", "states")
-            .attr("d", path);	
-	   	
+	   	.attr("class", "counties")
+	   	.selectAll("path")
+	   	.data(topojson.feature(us, us.objects.counties).features)
+	   	.enter().append("path")
+	   	.attr("d", path);
 });
 
 </script>
