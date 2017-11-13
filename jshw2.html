@@ -22,7 +22,14 @@ var path = d3.geo.path();
 	// test by printing the states
     console.log(topojson.feature(us, us.objects.states));
     // ALL CODE RELATING TO THE JSON FILE GOES HERE
+	svg.append("g")
+   .attr("class", "counties")
+   .selectAll("path")
+   .data(topojson.feature(us, us.objects.counties).features)
+   .enter().append("path")
+   .attr("d", path); 
 })
+	
 </script>
 </body>
 </html>
