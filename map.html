@@ -49,9 +49,8 @@ d3.json("us.json", function(error, us) {
    			   .attr("class", "states")
    			   .attr("d", path);
 
-});
 	
-d3.csv("city_growth.csv", function(error, data) {
+		d3.csv("city_growth.csv", function(error, data) {
 	svg.selectAll("circle")
    .data(data)
    .enter()
@@ -61,5 +60,8 @@ d3.csv("city_growth.csv", function(error, data) {
    .attr("r", 5)
    .style("fill", "red");
 });
+});
+	
+
 </script>
 </body>
