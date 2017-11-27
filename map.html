@@ -35,8 +35,14 @@ var svg = d3.select("body").append("svg")
 				 .attr("height", height);
 
 d3.csv("city_growth.csv", function(error, data) {
-	// Drawing of map already done before
-	// Now we will draw the points here
+	svg.selectAll("circle")
+   	.data(data)
+   	.enter()
+   	.append("circle")
+   	.attr("cx", function(d) {return projection([d.longitude, d.latitude])[0];})
+   	.attr("cy", function(d) {return projection([d.longitude, d.latitude])[1];})
+   	.attr("r", 5)
+   	.style("fill", "red");
 });
 d3.json("us.json", function(error, us) {
 
