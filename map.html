@@ -34,16 +34,7 @@ var svg = d3.select("body").append("svg")
 				 .attr("width", width)
 				 .attr("height", height);
 
-d3.csv("city_growth.csv", function(error, data) {
-	svg.selectAll("circle")
-   .data(data)
-   .enter()
-   .append("circle")
-   .attr("cx", function(d) {return projection([d.longitude, d.latitude])[0];})
-   .attr("cy", function(d) {return projection([d.longitude, d.latitude])[1];})
-   .attr("r", 5)
-   .style("fill", "red");
-});
+
 d3.json("us.json", function(error, us) {
 
 			svg.append("g")
@@ -58,6 +49,17 @@ d3.json("us.json", function(error, us) {
    			   .attr("class", "states")
    			   .attr("d", path);
 
+});
+	
+d3.csv("city_growth.csv", function(error, data) {
+	svg.selectAll("circle")
+   .data(data)
+   .enter()
+   .append("circle")
+   .attr("cx", function(d) {return projection([d.longitude, d.latitude])[0];})
+   .attr("cy", function(d) {return projection([d.longitude, d.latitude])[1];})
+   .attr("r", 5)
+   .style("fill", "red");
 });
 </script>
 </body>
