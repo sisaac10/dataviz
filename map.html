@@ -60,16 +60,7 @@ d3.json("us.json", function(error, us) {
    .attr("r", function(d) {return Math.sqrt(d.population * 0.00004);})
    .style("fill", "red");
 
-   svg.selectAll("text")
-  .data(data)
-  .enter()
-  .append("text")
-  .attr("transform", d => `translate(${path.centroid(d)})`)
-  .attr("text-anchor", "middle")
-  .attr("font-size", 10)
-  .attr("cx", d => _.get(d, "offset[0]", null))
-  .attr("cy", d => _.get(d, "offset[1]", null))
-  .text(d => d.city);			
+   			
 			
 });
 });
