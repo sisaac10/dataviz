@@ -60,8 +60,7 @@ d3.json("us.json", function(error, us) {
    .attr("r", function(d) {return Math.sqrt(d.population * 0.00004);})
    .style("fill", "red");
 
-   svg.append("g")
-  .selectAll("text")
+   svg.selectAll("text")
   .data(data)
   .enter()
   .append("text")
