@@ -66,7 +66,7 @@ d3.json("us.json", function(error, us) {
       .append("text")				
       .attr("cx", function(d) {return projection([d.longitude, d.latitude])[0];})
       .attr("cy", function(d) {return projection([d.longitude, d.latitude])[1];})
-      .text(function (d) { return d.city; });			
+      .attr("text", function(d) { return d.city; });			
 			
 });
 });
