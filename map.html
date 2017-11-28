@@ -68,8 +68,8 @@ d3.json("us.json", function(error, us) {
   .attr("transform", d => `translate(${path.centroid(d)})`)
   .attr("text-anchor", "middle")
   .attr("font-size", 10)
-  .attr("dx", d => _.get(d, "offset[0]", null))
-  .attr("dy", d => _.get(d, "offset[1]", null))
+  .attr("cx", d => _.get(d, "offset[0]", null))
+  .attr("cy", d => _.get(d, "offset[1]", null))
   .text(d => d.city);			
 			
 });
