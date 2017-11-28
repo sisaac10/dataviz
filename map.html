@@ -62,7 +62,7 @@ d3.json("us.json", function(error, us) {
 
    svg.append("g")
   .selectAll("text")
-  .data(data.city)
+  .data(data)
   .enter()
   .append("text")
   .attr("transform", d => `translate(${path.centroid(d)})`)
