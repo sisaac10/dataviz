@@ -61,10 +61,11 @@ d3.json("us.json", function(error, us) {
    .style("fill", "red");
 
    svg.selectAll("text")
-      .data(centroid.features).enter()    
-    .append("text")
-      .attr("x", function (d) { return path.centroid(d)[0]; })
-      .attr("y", function (d) { return path.centroid(d)[1]; })
+      .data(data)
+      .enter()    
+      .append("text")
+      .attr("cx", function (d) { return path.centroid(d)[0]; })
+      .attr("cy", function (d) { return path.centroid(d)[1]; })
       .text(function (d) { return d.properties.name; });			
 			
 });
