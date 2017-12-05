@@ -6,8 +6,7 @@
 <body>
 <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script type="text/javascript">
-d3.json("miserables.json", function(error, graph) {
-  if (error) throw error;
+
 
 width = 700;
 height = 500;
@@ -32,6 +31,9 @@ var svg=d3.select('body').append('svg')
     .attr('width', width)
     .attr('height', height);
   
+  d3.json("miserables.json", function(error, graph) {
+  if (error) throw error;
+    
   var force = d3.layout.force() 
     .size([width, height]) 
     .nodes(d3.values(nodes))
