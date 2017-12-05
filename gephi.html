@@ -36,7 +36,7 @@ d3.json("miserables.json", function(error, graph) {
     .enter().append("circle")
       .attr("r", 5)
       .attr("fill", function(d) { return color(d.group); })
-      .call(force.drag);
+      
 
   node.append("title")
       .text(function(d) { return d.id; });
