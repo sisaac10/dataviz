@@ -10,12 +10,8 @@
 width = 700;
 height = 500;
 
-var links = [
-{'source': 'Baratheon', 'target':'Lannister'},
-{'source': 'Baratheon', 'target':'Stark' },
-{ 'source': 'Lannister', 'target':'Stark' },
-{ 'source': 'Stark', 'target':'Bolton' },
-];
+var links = d3.json("miserables.json", function(error, graph) {
+  if (error) throw error;});
     
 // create empty nodes array
 var nodes = {};
